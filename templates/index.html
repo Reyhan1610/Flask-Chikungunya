@@ -1,0 +1,211 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="container">
+  <div class="section">
+
+    <!-- KELOMPOK -->
+    <div class="col s12 m7">
+      <div class="card horizontal">
+        <div class="card-stacked">
+          <div class="card-content center">
+
+            <div class="container center">
+              <div class="row">
+
+                <div class="col s12 m6">
+                  <div class="icon-block">
+                    <b class="center">Fathur Rosy</b>
+
+                    <p class="light">41519210045</p>
+                  </div>
+                </div>
+
+                <div class="col s12 m6">
+                  <div class="icon-block">
+                    <b class="center">Reyhan Alana</b>
+
+                    <p class="light">41519210048</p>
+                  </div>
+                </div>
+
+                
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END KELOMPOK -->
+  </div>
+  
+
+  <div class="section">
+
+    <div class="col s12 m7">
+
+      <div class="card horizontal">
+        <div class="card-stacked">
+          <div class="card-content">
+            <h4 class="header center blue-text">Prediksi Chikungunya</h4>
+
+            <form class="col s12" id="predictForm">
+              <div class="row">
+                
+
+                <div class="input-field col s6">
+                  <select name="sex" required>
+                    <option value="1">Male</option>
+                    <option value="0">Female</option>
+                  </select>
+                  <label>Gender</label>
+                </div>
+              </div>
+
+              <h5><i class="material-icons prefix"></i> Syndrome</h5>
+              <br>
+              <div class="row">
+                <div class="col m6 s12">
+                  <p>
+                    <label>
+                      <input name="fever" type="hidden" />
+                      <input name="fever" type="checkbox" class="filled-in" />
+                      <span>Fever</span>
+                    </label>
+                  </p>
+                  <p>
+                    <label>
+                      <input name="cold" type="hidden" />
+                      <input name="cold" type="hidden" class="filled-in" />
+                      <span></span>
+                    </label>
+                  </p>
+                  <p>
+                    <label>
+                      <input name="joint pains" type="hidden" />
+                      <input name="joint pains" type="checkbox" class="filled-in" />
+                      <span>Joint Pains</span>
+                    </label>
+                  </p>
+                  <p>
+                    <label>
+                      <input name="myalgia" type="hidden" />
+                      <input name="myalgia" type="checkbox" class="filled-in" />
+                      <span>Myalgia</span>
+                    </label>
+                  </p>
+                  <p>
+                    <label>
+                      <input name="fatigue" type="hidden" />
+                      <input name="fatigue" type="checkbox" class="filled-in" />
+                      <span>Fatigue</span>
+                    </label>
+                  </p>
+                  <p>
+                    <label>
+                      <input name="vomitting" type="hidden" />
+                      <input name="vomitting" type="hidden" class="filled-in" />
+                      <span></span>
+                    </label>
+                  </p>
+                </div>
+                
+                <div class="col m6 s12">
+                    <p>
+                      <label>
+                        <input name="headache" type="hidden" />
+                        <input name="headache" type="checkbox" class="filled-in" />
+                        <span>Headache</span>
+                      </label>
+                    </p>
+                  <p>
+                    <label>
+                      <input name="arthritis" type="hidden" />
+                      <input name="arthritis" type="hidden" class="filled-in" />
+                      <span></span>
+                    </label>
+                  </p>
+                  <p>
+                    <label>
+                      <input name="Conjuctivitis" type="hidden" />
+                      <input name="Conjuctivitis" type="hidden" class="filled-in" />
+                      <span></span>
+                    </label>
+                  </p>
+                  <p>
+                    <label>
+                      <input name="Nausea" type="hidden" />
+                      <input name="Nausea" type="checkbox" class="filled-in" />
+                      <span>Nausea</span>
+                    </label>
+                  </p>
+                  <p>
+                    <label>
+                      <input name="Maculopapular rash" type="hidden" />
+                      <input name="Maculopapular rash" type="checkbox" class="filled-in" />
+                      <span>Maculopapular Rash</span>
+                    </label>
+                  </p>
+                  <p>
+                    <label>
+                      <input name="Eye Pain" type="hidden" />
+                      <input name="Eye Pain" type="hidden" class="filled-in" />
+                      <span></span>
+                    </label>
+                  </p>
+                  <p>
+                    <label>
+                      <input name="Chills" type="hidden" />
+                      <input name="Chills" type="hidden" class="filled-in" />
+                      <span></span>
+                    </label>
+                  </p>
+                  <p>
+                    <label>
+                      <input name="Swelling" type="hidden" />
+                      <input name="Swelling" type="checkbox" class="filled-in" />
+                      <span>Swelling</span>
+                    </label>
+                  </p>
+                </div>
+              </div>
+            </form>
+            <div class="row center">
+              <button id="predictButton" class="btn-large waves-effect waves-light light-blue">Prediksi</button>
+            </div>
+
+            <div class="card horizontal" id="predictionResultCard" style="display: none;">
+              <div class="card-stacked">
+                <div class="card-content">
+                  <h4 class="header center blue-text">Hasil Prediksi</h4>
+                  <!--   Icon Section   -->
+                  <div class="collection left-align">
+                    <a href="#!" class="collection-item"><span class="badge"
+                        id="predictionClass">{Severe Chikungunya}</span>Menderita Chikungunya Berat?</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<br><br>
+</div>
+
+{% endblock %}
+
+{% block script %}
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var elems = document.querySelectorAll('select');
+    var instances = M.FormSelect.init(elems);
+  });
+</script>
+<script src="{{url_for('static', filename='predict.js')}}"></script>
+{% endblock %}
